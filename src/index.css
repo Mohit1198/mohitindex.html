@@ -85,6 +85,10 @@ body {
   50% { transform: scaleX(0.3); opacity: 0.4; }
 }
 
+@keyframes shimmer {
+  100% { transform: translateX(200%); }
+}
+
 .scroll-line-animation {
   animation: scrollLine 2s ease-in-out infinite;
 }

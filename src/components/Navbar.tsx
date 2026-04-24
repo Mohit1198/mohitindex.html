@@ -4,6 +4,7 @@ import { Menu, X, Sun, Moon } from 'lucide-react';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [logoError, setLogoError] = useState(false);
 
   const navLinks = [
     { label: 'About', href: '#about' },
@@ -17,19 +18,12 @@ export default function Navbar() {
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 z-[100] flex items-center justify-between px-[5vw] h-[68px] bg-[rgba(10,10,15,0.7)] backdrop-blur-[24px] border-bottom border-[var(--border)] transition-colors duration-400">
-        <div className="flex items-center gap-3 group cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          <div className="w-10 h-10 rounded-xl bg-[var(--grad)] flex items-center justify-center text-white font-syne font-black text-lg shadow-[0_8px_16px_rgba(124,92,252,0.4)] group-hover:scale-105 transition-transform">
-            MK
-          </div>
-          <div className="flex flex-col">
-            <span className="font-syne font-extrabold text-[1.25rem] leading-none tracking-[-0.04em] text-[var(--accent1)]">
-              Mohit Kothari
-            </span>
-            <span className="text-[0.6rem] text-[var(--muted)] tracking-[0.2em] uppercase font-medium">
-              Graphic Designer
-            </span>
-          </div>
-        </div>
+        <button 
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="font-syne font-bold text-[1.2rem] tracking-tight text-[var(--accent1)] hover:text-[var(--text)] transition-colors uppercase"
+        >
+          Home
+        </button>
 
         <ul className="hidden md:flex gap-10 items-center">
           {navLinks.map((link) => (

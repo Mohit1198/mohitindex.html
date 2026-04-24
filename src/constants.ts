@@ -79,6 +79,7 @@ export const SKILLS = [
   { icon: 'https://cdn.jsdelivr.net/npm/simple-icons@11.0.0/icons/adobephotoshop.svg', name: 'Adobe Photoshop', width: 80, sub: 'Photo & Retouching' },
   { icon: 'https://cdn.jsdelivr.net/npm/simple-icons@11.0.0/icons/adobeaftereffects.svg', name: 'After Effects', width: 40, sub: 'Motion & Animation' },
   { icon: 'https://cdn.jsdelivr.net/npm/simple-icons@11.0.0/icons/canva.svg', name: 'Canva', width: 70, sub: 'Rapid Design' },
+  { icon: 'https://cdn.jsdelivr.net/npm/simple-icons@11.0.0/icons/openai.svg', name: 'Chat GPT', width: 40, sub: 'For Image Generation' },
 ];
 
 export const EXPERIENCE = [

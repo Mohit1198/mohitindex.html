@@ -42,14 +42,17 @@ export default function Skills() {
             </div>
             <h3 className="font-syne font-semibold text-[1.1rem] mb-4">{skill.name}</h3>
             
-            <div className="w-full h-1 bg-[var(--border)] rounded-full mb-2 overflow-hidden">
+            <div className="w-full h-1 bg-[var(--border)] rounded-full mb-2 overflow-hidden relative">
               <motion.div
                 initial={{ width: 0 }}
                 whileInView={{ width: `${skill.width}%` }}
                 viewport={{ once: true }}
-                transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-                className="h-full bg-[var(--grad)] rounded-full"
-              />
+                transition={{ duration: 1.5, ease: "easeInOut", delay: 0.3 + (idx * 0.1) }}
+                className="h-full bg-[var(--grad)] rounded-full relative"
+              >
+                <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/40 to-transparent skew-x-[-20deg] translate-x-[-100%] animate-[shimmer_3s_infinite]" />
+                <div className="absolute inset-0 bg-[var(--accent1)] opacity-40 blur-sm" />
+              </motion.div>
             </div>
             
             <div className="flex justify-between items-center text-[0.8rem] text-[var(--muted)]">

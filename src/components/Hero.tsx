@@ -73,14 +73,14 @@ export default function Hero() {
       >
         <div className="text-right">
           <div className="font-['Syne'] text-[2.2rem] font-bold bg-[var(--grad)] bg-clip-text text-transparent leading-none">4+</div>
-          <div className="text-[0.75rem] text-[var(--muted)] mt-1">Years Experience</div>
+          <div className="text-[0.75rem] text-[var(--muted)] mt-1">Years of Experience</div>
         </div>
         <div className="text-right">
           <div className="font-['Syne'] text-[2.2rem] font-bold bg-[var(--grad)] bg-clip-text text-transparent leading-none">10+</div>
           <div className="text-[0.75rem] text-[var(--muted)] mt-1">Clinic Brands</div>
         </div>
         <div className="text-right">
-          <div className="font-['Syne'] text-[2.2rem] font-bold bg-[var(--grad)] bg-clip-text text-transparent leading-none">6</div>
+          <div className="font-['Syne'] text-[2.2rem] font-bold bg-[var(--grad)] bg-clip-text text-transparent leading-none">4</div>
           <div className="text-[0.75rem] text-[var(--muted)] mt-1">Companies</div>
         </div>
       </motion.div>
