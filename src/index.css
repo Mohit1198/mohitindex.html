@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a0a0f;
+  --color-bg2: #111118;
+  --color-bg3: #18181f;
+  --color-surface: #1e1e28;
+  --color-border: rgba(255, 255, 255, 0.07);
+  --color-text: #f0eff5;
+  --color-muted: #7a7888;
+  --color-accent1: #7c5cfc;
+  --color-accent2: #4f9fff;
+  --color-accent3: #c084fc;
+  
+  --font-syne: "Syne", sans-serif;
+  --font-dm: "DM Sans", sans-serif;
+}
+
+:root {
+  --bg: #0a0a0f;
+  --bg2: #111118;
+  --bg3: #18181f;
+  --surface: #1e1e28;
+  --border: rgba(255, 255, 255, 0.07);
+  --text: #f0eff5;
+  --muted: #7a7888;
+  --accent1: #7c5cfc;
+  --accent2: #4f9fff;
+  --accent3: #c084fc;
+  --grad: linear-gradient(135deg, #7c5cfc, #4f9fff);
+  --grad2: linear-gradient(135deg, #c084fc, #7c5cfc);
+  --white: #ffffff;
+  --radius: 16px;
+  --transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme="light"] {
+  --bg: #f5f4fa;
+  --bg2: #eeedf5;
+  --bg3: #e8e7f2;
+  --surface: #ffffff;
+  --border: rgba(0, 0, 0, 0.08);
+  --text: #120f1e;
+  --muted: #7a7888;
+  --white: #120f1e;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+  transition: background 0.4s, color 0.4s;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent1);
+  border-radius: 2px;
+}
+
+.hero-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+.pulse-animation {
+  animation: pulse 2s infinite;
+}
+
+@keyframes scrollLine {
+  0%, 100% { transform: scaleX(1); opacity: 1; }
+  50% { transform: scaleX(0.3); opacity: 0.4; }
+}
+
+.scroll-line-animation {
+  animation: scrollLine 2s ease-in-out infinite;
+}
+
