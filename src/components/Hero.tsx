@@ -6,14 +6,47 @@ export default function Hero() {
       <div className="absolute inset-0 z-0 hero-noise pointer-events-none opacity-40" />
       
       {/* Background Orbs */}
-      <div className="absolute w-[500px] h-[500px] bg-[rgba(255,94,94,0.12)] rounded-full blur-[80px] -top-[100px] -right-[100px] pointer-events-none" />
-      <div className="absolute w-[350px] h-[350px] bg-[rgba(255,212,100,0.08)] rounded-full blur-[80px] bottom-[50px] left-[10%] pointer-events-none" />
-      <div className="absolute w-[250px] h-[250px] bg-[rgba(226,60,100,0.06)] rounded-full blur-[80px] top-[40%] right-[20%] pointer-events-none" />
+      <motion.div 
+        animate={{ 
+          y: [0, -20, 0],
+          opacity: [0.1, 0.15, 0.1]
+        }}
+        transition={{ 
+          duration: 10,
+          repeat: Infinity,
+          ease: "linear"
+        }}
+        className="absolute w-[500px] h-[500px] bg-[rgba(255,94,94,0.12)] rounded-full blur-[80px] -top-[100px] -right-[100px] pointer-events-none" 
+      />
+      <motion.div 
+        animate={{ 
+          y: [0, 20, 0],
+          opacity: [0.05, 0.08, 0.05]
+        }}
+        transition={{ 
+          duration: 12,
+          repeat: Infinity,
+          ease: "linear"
+        }}
+        className="absolute w-[350px] h-[350px] bg-[rgba(255,212,100,0.08)] rounded-full blur-[80px] bottom-[50px] left-[10%] pointer-events-none" 
+      />
+      <motion.div 
+        animate={{ 
+          x: [0, -15, 0],
+          opacity: [0.04, 0.06, 0.04]
+        }}
+        transition={{ 
+          duration: 15,
+          repeat: Infinity,
+          ease: "linear"
+        }}
+        className="absolute w-[250px] h-[250px] bg-[rgba(226,60,100,0.06)] rounded-full blur-[80px] top-[40%] right-[20%] pointer-events-none" 
+      />
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: [0.2, 0, 0.2, 1] }}
           className="inline-flex items-center gap-2 bg-[rgba(255,94,94,0.1)] border border-[rgba(255,94,94,0.2)] rounded-full px-3.5 py-1.5 text-[0.78rem] text-[var(--accent1)] font-medium mb-8 relative z-1"
         >
         <div className="w-1.5 h-1.5 bg-[#4ade80] rounded-full shadow-[0_0_6px_#4ade80] pulse-animation" />
@@ -21,9 +54,9 @@ export default function Hero() {
       </motion.div>
 
       <motion.h1
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, delay: 0.35 }}
+        transition={{ duration: 1.2, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
         className="font-syne font-extrabold text-[clamp(4rem,12vw,9rem)] leading-[0.9] tracking-[-0.04em] mb-8 relative z-1"
       >
         <div className="text-[var(--text)]">Mohit</div>
@@ -33,9 +66,9 @@ export default function Hero() {
       </motion.h1>
 
       <motion.p
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, delay: 0.5 }}
+        transition={{ duration: 1.2, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
         className="text-[clamp(1rem,2vw,1.25rem)] text-[var(--muted)] max-w-[480px] leading-[1.7] mb-10 relative z-1"
       >
         Graphic Designer crafting visual identities, social media campaigns, and brand experiences — 4+ years turning ideas into impactful design.

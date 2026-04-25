@@ -63,9 +63,9 @@ export default function Portfolio() {
             key={project.id}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: idx * 0.1 }}
-            className={`group bg-[var(--surface)] border border-[var(--border)] rounded-[var(--radius)] overflow-hidden cursor-pointer transition-all duration-400 hover:-translate-y-2 hover:border-[rgba(255,94,94,0.3)] hover:shadow-[0_24px_64px_rgba(0,0,0,0.4)] interactive ${
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: idx * 0.05, ease: [0.16, 1, 0.3, 1] }}
+            className={`group bg-[var(--surface)] border border-[var(--border)] rounded-[var(--radius)] overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:border-[rgba(255,94,94,0.4)] hover:shadow-[0_24px_64px_rgba(0,0,0,0.5)] interactive ${
               project.featured ? 'lg:col-span-2' : ''
             }`}
             onClick={() => setSelectedProject(project)}
@@ -74,11 +74,17 @@ export default function Portfolio() {
               <img
                 src={project.img}
                 alt={project.title}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-linear-to-br from-[rgba(255,94,94,0.75)] to-[rgba(255,212,100,0.75)] opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex items-center justify-center text-white text-2xl">
-                ↗
+              <div className="absolute inset-0 bg-linear-to-br from-[rgba(255,94,94,0.4)] to-[rgba(255,212,100,0.4)] opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex items-center justify-center text-white">
+                <motion.div 
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  whileHover={{ scale: 1, opacity: 1 }}
+                  className="w-12 h-12 rounded-full bg-white text-[var(--accent1)] flex items-center justify-center text-xl shadow-xl"
+                >
+                  ↗
+                </motion.div>
               </div>
             </div>
 

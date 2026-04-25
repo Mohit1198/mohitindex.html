@@ -5,11 +5,11 @@ export default function CustomCursor() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
 
-  const cursorX = useSpring(0, { damping: 20, stiffness: 100 });
-  const cursorY = useSpring(0, { damping: 20, stiffness: 100 });
+  const cursorX = useSpring(0, { damping: 25, stiffness: 120 });
+  const cursorY = useSpring(0, { damping: 25, stiffness: 120 });
   
-  const ringX = useSpring(0, { damping: 15, stiffness: 60 });
-  const ringY = useSpring(0, { damping: 15, stiffness: 60 });
+  const ringX = useSpring(0, { damping: 20, stiffness: 80 });
+  const ringY = useSpring(0, { damping: 20, stiffness: 80 });
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {

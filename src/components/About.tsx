@@ -26,13 +26,17 @@ export default function About() {
         </p>
 
         <div className="flex flex-wrap justify-center gap-3">
-          {['Brand Identity', 'Social Media', 'Logo Design', 'Print Design', 'UI Design', 'Adobe Suite'].map(tag => (
-            <span
+          {['Brand Identity', 'Social Media', 'Logo Design', 'Print Design', 'UI Design', 'Adobe Suite'].map((tag, idx) => (
+            <motion.span
               key={tag}
-              className="bg-[var(--surface)] border border-[var(--border)] rounded-full px-5 py-2 text-[0.85rem] text-[var(--muted)] hover:border-[var(--accent1)] hover:text-[var(--accent1)] transition-colors cursor-default"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 + idx * 0.05, ease: [0.16, 1, 0.3, 1] }}
+              className="bg-[var(--surface)] border border-[var(--border)] rounded-full px-5 py-2 text-[0.85rem] text-[var(--muted)] hover:border-[var(--accent1)] hover:text-[var(--accent1)] transition-all cursor-default hover:scale-105"
             >
               {tag}
-            </span>
+            </motion.span>
           ))}
         </div>
       </motion.div>

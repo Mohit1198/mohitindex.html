@@ -32,14 +32,18 @@ export default function Experience() {
           {EXPERIENCE.map((exp, idx) => (
             <motion.div
               key={`${exp.company}-${exp.role}`}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: idx * 0.1 }}
+              initial={{ opacity: 0, x: -10, y: 10 }}
+              whileInView={{ opacity: 1, x: 0, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.8, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
               className="pl-8 lg:pl-12 relative group"
             >
               {/* Dot */}
-              <div
+              <motion.div
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ type: "spring", stiffness: 300, damping: 20, delay: 0.3 + idx * 0.1 }}
                 className={`absolute left-[-5.5px] top-2 w-[11px] h-[11px] rounded-full border-2 border-[var(--accent1)] bg-[var(--bg)] shadow-[0_0_12px_rgba(255,94,94,0.3)] ${
                   exp.current ? 'bg-[var(--accent1)]' : ''
                 }`}

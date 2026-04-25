@@ -17,7 +17,12 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-[100] flex items-center justify-between px-[5vw] h-[68px] bg-[rgba(10,10,15,0.7)] backdrop-blur-[24px] border-bottom border-[var(--border)] transition-colors duration-400">
+      <motion.nav 
+        initial={{ y: -70, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        className="fixed top-0 left-0 right-0 z-[100] flex items-center justify-between px-[5vw] h-[68px] bg-[rgba(10,10,15,0.7)] backdrop-blur-[24px] border-bottom border-[var(--border)] transition-colors duration-400"
+      >
         <button 
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className="font-syne font-bold text-[1.2rem] tracking-tight text-[var(--accent1)] hover:text-[var(--text)] transition-colors uppercase"
@@ -54,7 +59,7 @@ export default function Navbar() {
             <Menu size={24} />
           </button>
         </div>
-      </nav>
+      </motion.nav>
 
       <AnimatePresence>
         {isMenuOpen && (
