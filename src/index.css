@@ -2,34 +2,34 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #0a0a0f;
-  --color-bg2: #111118;
-  --color-bg3: #18181f;
-  --color-surface: #1e1e28;
-  --color-border: rgba(255, 255, 255, 0.07);
-  --color-text: #f0eff5;
-  --color-muted: #7a7888;
-  --color-accent1: #7c5cfc;
-  --color-accent2: #4f9fff;
-  --color-accent3: #c084fc;
+  --color-bg: #0f0507;
+  --color-bg2: #1a0a0c;
+  --color-bg3: #250f12;
+  --color-surface: #2d1317;
+  --color-border: rgba(252, 237, 216, 0.08);
+  --color-text: #FCEDD8;
+  --color-muted: #a48a8e;
+  --color-accent1: #FF5E5E;
+  --color-accent2: #FFD464;
+  --color-accent3: #E23C64;
   
   --font-syne: "Syne", sans-serif;
   --font-dm: "DM Sans", sans-serif;
 }
 
 :root {
-  --bg: #0a0a0f;
-  --bg2: #111118;
-  --bg3: #18181f;
-  --surface: #1e1e28;
-  --border: rgba(255, 255, 255, 0.07);
-  --text: #f0eff5;
-  --muted: #7a7888;
-  --accent1: #7c5cfc;
-  --accent2: #4f9fff;
-  --accent3: #c084fc;
-  --grad: linear-gradient(135deg, #7c5cfc, #4f9fff);
-  --grad2: linear-gradient(135deg, #c084fc, #7c5cfc);
+  --bg: #0f0507;
+  --bg2: #1a0a0c;
+  --bg3: #250f12;
+  --surface: #2d1317;
+  --border: rgba(252, 237, 216, 0.08);
+  --text: #FCEDD8;
+  --muted: #a48a8e;
+  --accent1: #FF5E5E;
+  --accent2: #FFD464;
+  --accent3: #E23C64;
+  --grad: linear-gradient(135deg, #FF5E5E, #FFD464);
+  --grad2: linear-gradient(135deg, #E23C64, #FF5E5E);
   --white: #ffffff;
   --radius: 16px;
   --transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);

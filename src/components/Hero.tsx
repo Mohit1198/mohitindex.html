@@ -6,16 +6,16 @@ export default function Hero() {
       <div className="absolute inset-0 z-0 hero-noise pointer-events-none opacity-40" />
       
       {/* Background Orbs */}
-      <div className="absolute w-[500px] h-[500px] bg-[rgba(124,92,252,0.18)] rounded-full blur-[80px] -top-[100px] -right-[100px] pointer-events-none" />
-      <div className="absolute w-[350px] h-[350px] bg-[rgba(79,159,255,0.12)] rounded-full blur-[80px] bottom-[50px] left-[10%] pointer-events-none" />
-      <div className="absolute w-[250px] h-[250px] bg-[rgba(192,132,252,0.1)] rounded-full blur-[80px] top-[40%] right-[20%] pointer-events-none" />
+      <div className="absolute w-[500px] h-[500px] bg-[rgba(255,94,94,0.12)] rounded-full blur-[80px] -top-[100px] -right-[100px] pointer-events-none" />
+      <div className="absolute w-[350px] h-[350px] bg-[rgba(255,212,100,0.08)] rounded-full blur-[80px] bottom-[50px] left-[10%] pointer-events-none" />
+      <div className="absolute w-[250px] h-[250px] bg-[rgba(226,60,100,0.06)] rounded-full blur-[80px] top-[40%] right-[20%] pointer-events-none" />
 
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className="inline-flex items-center gap-2 bg-[rgba(124,92,252,0.12)] border border-[rgba(124,92,252,0.3)] rounded-full px-3.5 py-1.5 text-[0.78rem] text-[var(--accent3)] font-medium mb-8 relative z-1"
-      >
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="inline-flex items-center gap-2 bg-[rgba(255,94,94,0.1)] border border-[rgba(255,94,94,0.2)] rounded-full px-3.5 py-1.5 text-[0.78rem] text-[var(--accent1)] font-medium mb-8 relative z-1"
+        >
         <div className="w-1.5 h-1.5 bg-[#4ade80] rounded-full shadow-[0_0_6px_#4ade80] pulse-animation" />
         Available for Freelance & Full-time
       </motion.div>
@@ -49,7 +49,7 @@ export default function Hero() {
       >
         <a
           href="#portfolio"
-          className="inline-flex items-center gap-2 bg-[var(--grad)] text-white border-none rounded-full px-7 py-3.5 text-[0.95rem] font-medium transition-all shadow-[0_8px_32px_rgba(124,92,252,0.3)] hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(124,92,252,0.4)] no-underline interactive"
+          className="inline-flex items-center gap-2 bg-[var(--grad)] text-white border-none rounded-full px-7 py-3.5 text-[0.95rem] font-bold transition-all shadow-[0_8px_32px_rgba(255,94,94,0.2)] hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(255,94,94,0.3)] no-underline interactive"
         >
           <span>View Work</span>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -58,7 +58,7 @@ export default function Hero() {
         </a>
         <a
           href="#contact"
-          className="inline-flex items-center gap-2 bg-transparent text-[var(--text)] border border-[var(--border)] rounded-full px-7 py-3.5 text-[0.95rem] font-normal transition-all hover:border-[var(--accent1)] hover:bg-[rgba(124,92,252,0.08)] hover:-translate-y-0.5 no-underline interactive"
+          className="inline-flex items-center gap-2 bg-transparent text-[var(--text)] border border-[var(--border)] rounded-full px-7 py-3.5 text-[0.95rem] font-normal transition-all hover:border-[var(--accent1)] hover:bg-[rgba(255,94,94,0.06)] hover:-translate-y-0.5 no-underline interactive"
         >
           Contact Me
         </a>

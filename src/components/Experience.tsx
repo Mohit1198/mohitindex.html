@@ -40,14 +40,14 @@ export default function Experience() {
             >
               {/* Dot */}
               <div
-                className={`absolute left-[-5px] top-2 w-[11px] h-[11px] rounded-full border-2 border-[var(--accent1)] bg-[var(--bg)] shadow-[0_0_12px_rgba(124,92,252,0.4)] ${
+                className={`absolute left-[-5px] top-2 w-[11px] h-[11px] rounded-full border-2 border-[var(--accent1)] bg-[var(--bg)] shadow-[0_0_12px_rgba(255,94,94,0.3)] ${
                   exp.current ? 'bg-[var(--accent1)]' : ''
                 }`}
               />
 
               <div className="flex flex-wrap items-start justify-between mb-1 gap-2">
                 <h3 className="font-['Syne'] font-semibold text-[1.1rem] text-[var(--text)]">{exp.role}</h3>
-                <span className="text-[0.82rem] text-[var(--accent1)] bg-[rgba(124,92,252,0.1)] border border-[rgba(124,92,252,0.2)] px-3 py-1 rounded-full font-normal">
+                <span className="text-[0.82rem] text-[var(--accent1)] bg-[rgba(255,94,94,0.1)] border border-[rgba(255,94,94,0.15)] px-3 py-1 rounded-full font-normal">
                   {exp.company}
                 </span>
               </div>

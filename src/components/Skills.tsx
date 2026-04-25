@@ -32,7 +32,7 @@ export default function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: idx * 0.1 }}
-            className="group relative bg-[var(--surface)] border border-[var(--border)] rounded-[var(--radius)] p-8 overflow-hidden transition-all duration-400 hover:-translate-y-1.5 hover:border-[rgba(124,92,252,0.4)] interactive"
+            className="group relative bg-[var(--surface)] border border-[var(--border)] rounded-[var(--radius)] p-8 overflow-hidden transition-all duration-400 hover:-translate-y-1.5 hover:border-[rgba(255,94,94,0.3)] interactive"
           >
             {/* Background Hover Effect */}
             <div className="absolute inset-0 bg-[var(--grad)] opacity-0 group-hover:opacity-5 transition-opacity duration-400 pointer-events-none" />

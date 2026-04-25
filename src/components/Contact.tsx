@@ -71,7 +71,7 @@ export default function Contact() {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-4 p-5 bg-[var(--surface)] border border-[var(--border)] rounded-[var(--radius)] no-underline text-[var(--text)] transition-all hover:border-[rgba(124,92,252,0.4)] hover:-translate-y-1 interactive text-left"
+              className="flex items-center gap-4 p-5 bg-[var(--surface)] border border-[var(--border)] rounded-[var(--radius)] no-underline text-[var(--text)] transition-all hover:border-[rgba(255,94,94,0.3)] hover:-translate-y-1 interactive text-left"
             >
               <div className="w-11 h-11 bg-[var(--grad)] rounded-[10px] flex items-center justify-center text-white shrink-0">
                 {link.icon}

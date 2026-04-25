@@ -32,7 +32,7 @@ export default function Education() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: idx * 0.1 }}
-            className="bg-[var(--surface)] border border-[var(--border)] rounded-[var(--radius)] p-8 md:px-10 hover:border-[rgba(124,92,252,0.3)] hover:-translate-y-1 transition-all duration-400"
+            className="bg-[var(--surface)] border border-[var(--border)] rounded-[var(--radius)] p-8 md:px-10 hover:border-[rgba(255,94,94,0.25)] hover:-translate-y-1 transition-all duration-400"
           >
             <div className="text-[0.78rem] text-[var(--accent1)] tracking-[0.06em] font-semibold mb-3">
               {edu.period}

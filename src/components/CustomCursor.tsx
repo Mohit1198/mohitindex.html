@@ -54,7 +54,7 @@ export default function CustomCursor() {
         transition={{ type: 'spring', damping: 20, stiffness: 100 }}
       />
       <motion.div
-        className="fixed top-0 left-0 w-9 h-9 border border-[rgba(124,92,252,0.5)] rounded-full pointer-events-none z-[9998] hidden md:block"
+        className="fixed top-0 left-0 w-9 h-9 border border-[rgba(255,94,94,0.4)] rounded-full pointer-events-none z-[9998] hidden md:block"
         style={{
           x: ringX,
           y: ringY,
