@@ -59,33 +59,41 @@ export default function Navbar() {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-[200] bg-[var(--bg)] flex flex-col items-center justify-center gap-10"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[200] bg-[rgba(10,10,15,0.98)] backdrop-blur-xl flex flex-col items-center justify-center p-8"
           >
             <button
               onClick={() => setIsMenuOpen(false)}
-              className="absolute top-5 right-5 text-[var(--text)]"
+              className="absolute top-5 right-5 w-12 h-12 flex items-center justify-center rounded-full border border-[var(--border)] text-[var(--text)]"
             >
-              <X size={32} />
+              <X size={24} />
             </button>
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                onClick={() => setIsMenuOpen(false)}
-                className="font-syne text-[2rem] font-bold text-[var(--text)] no-underline"
+            <div className="flex flex-col items-center gap-6">
+              {navLinks.map((link, i) => (
+                <motion.a
+                  key={link.label}
+                  href={link.href}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.05 + 0.1 }}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="font-syne text-[2.5rem] font-bold text-[var(--text)] no-underline hover:text-[var(--accent1)] transition-colors"
+                >
+                  {link.label}
+                </motion.a>
+              ))}
+              <motion.a
+                href="mailto:mohit.98.kothari@gmail.com"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.5 }}
+                className="mt-8 bg-[var(--grad)] text-white border-none rounded-full px-10 py-4 text-[1.2rem] font-bold no-underline shadow-[0_12px_32px_rgba(255,94,94,0.3)]"
               >
-                {link.label}
-              </a>
-            ))}
-            <a
-              href="mailto:mohit.98.kothari@gmail.com"
-              className="bg-[var(--grad)] text-white border-none rounded-full px-8 py-3 text-[1.1rem] font-medium no-underline"
-            >
-              Hire Me
-            </a>
+                Hire Me
+              </motion.a>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

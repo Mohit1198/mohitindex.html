@@ -2,7 +2,8 @@ import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 import { createServer as createViteServer } from "vite";
-import { extractProjectsFromBehance } from "./src/services/geminiService";
+import { extractProjectsFromBehance } from "./src/services/geminiService.ts";
+import "dotenv/config";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);

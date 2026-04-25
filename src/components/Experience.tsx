@@ -24,9 +24,9 @@ export default function Experience() {
         Experiences
       </motion.h2>
 
-      <div className="relative mt-14">
+      <div className="relative mt-14 ml-2">
         {/* Timeline Line */}
-        <div className="absolute left-0 top-0 bottom-0 w-[1px] bg-[var(--border)]" />
+        <div className="absolute left-[-0.5px] top-0 bottom-0 w-[1px] bg-[var(--border)]" />
 
         <div className="flex flex-col gap-12">
           {EXPERIENCE.map((exp, idx) => (
@@ -36,11 +36,11 @@ export default function Experience() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: idx * 0.1 }}
-              className="pl-12 relative group"
+              className="pl-8 lg:pl-12 relative group"
             >
               {/* Dot */}
               <div
-                className={`absolute left-[-5px] top-2 w-[11px] h-[11px] rounded-full border-2 border-[var(--accent1)] bg-[var(--bg)] shadow-[0_0_12px_rgba(255,94,94,0.3)] ${
+                className={`absolute left-[-5.5px] top-2 w-[11px] h-[11px] rounded-full border-2 border-[var(--accent1)] bg-[var(--bg)] shadow-[0_0_12px_rgba(255,94,94,0.3)] ${
                   exp.current ? 'bg-[var(--accent1)]' : ''
                 }`}
               />

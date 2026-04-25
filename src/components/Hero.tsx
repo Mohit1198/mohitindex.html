@@ -64,24 +64,25 @@ export default function Hero() {
         </a>
       </motion.div>
 
-      {/* Stats - Desktop only */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, delay: 0.8 }}
-        className="absolute right-[5vw] bottom-[100px] hidden lg:flex gap-16 z-1"
+        className="mt-16 lg:mt-0 lg:absolute lg:right-[5vw] lg:bottom-[80px] z-1 w-full lg:w-auto"
       >
-        <div className="flex flex-col items-end">
-          <div className="font-syne text-[2.8rem] font-bold bg-linear-to-r from-[var(--accent1)] to-[var(--accent2)] bg-clip-text text-transparent leading-none">4+</div>
-          <div className="text-[0.7rem] text-[var(--muted)] mt-2 uppercase tracking-[0.1em] font-medium">Years of Experience</div>
-        </div>
-        <div className="flex flex-col items-end">
-          <div className="font-syne text-[2.8rem] font-bold bg-linear-to-r from-[var(--accent1)] to-[var(--accent2)] bg-clip-text text-transparent leading-none">10+</div>
-          <div className="text-[0.7rem] text-[var(--muted)] mt-2 uppercase tracking-[0.1em] font-medium">Clinic Brands</div>
-        </div>
-        <div className="flex flex-col items-end">
-          <div className="font-syne text-[2.8rem] font-bold bg-linear-to-r from-[var(--accent1)] to-[var(--accent2)] bg-clip-text text-transparent leading-none">4</div>
-          <div className="text-[0.7rem] text-[var(--muted)] mt-2 uppercase tracking-[0.1em] font-medium">Companies</div>
+        <div className="grid grid-cols-2 lg:flex gap-y-10 gap-x-6 lg:gap-16">
+          <div className="flex flex-col items-start lg:items-end">
+            <div className="font-syne text-[2.4rem] lg:text-[2.8rem] font-bold bg-linear-to-r from-[var(--accent1)] to-[var(--accent2)] bg-clip-text text-transparent leading-none">4+</div>
+            <div className="text-[0.65rem] lg:text-[0.7rem] text-[var(--muted)] mt-2 uppercase tracking-[0.12em] font-medium">Years of Experience</div>
+          </div>
+          <div className="flex flex-col items-start lg:items-end">
+            <div className="font-syne text-[2.4rem] lg:text-[2.8rem] font-bold bg-linear-to-r from-[var(--accent1)] to-[var(--accent2)] bg-clip-text text-transparent leading-none">10+</div>
+            <div className="text-[0.65rem] lg:text-[0.7rem] text-[var(--muted)] mt-2 uppercase tracking-[0.12em] font-medium">Clinic Brands</div>
+          </div>
+          <div className="flex flex-col items-start lg:items-end col-span-2 lg:col-span-1 border-t border-[var(--border)] pt-8 lg:border-t-0 lg:pt-0">
+            <div className="font-syne text-[2.4rem] lg:text-[2.8rem] font-bold bg-linear-to-r from-[var(--accent1)] to-[var(--accent2)] bg-clip-text text-transparent leading-none">4</div>
+            <div className="text-[0.65rem] lg:text-[0.7rem] text-[var(--muted)] mt-2 uppercase tracking-[0.12em] font-medium">Companies</div>
+          </div>
         </div>
       </motion.div>
 

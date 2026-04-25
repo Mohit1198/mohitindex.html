@@ -23,7 +23,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.94, y: 20 }}
             onClick={(e) => e.stopPropagation()}
-            className="bg-[var(--bg2)] border border-[var(--border)] rounded-[20px] max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 md:p-10 relative scrollbar-hide"
+            className="bg-[var(--bg2)] border border-[var(--border)] rounded-[20px] max-w-4xl w-full max-h-[90vh] overflow-y-auto p-6 md:p-10 relative scrollbar-hide"
           >
             <button
               onClick={onClose}

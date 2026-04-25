@@ -1,10 +1,23 @@
-import { GoogleGenAI, Type } from "@google/genai";
-import { Project } from "../constants";
+import { GoogleGenAI } from "@google/genai";
+import { Project } from "../constants.ts";
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+let genAI: GoogleGenAI | null = null;
+
+function getGenAI() {
+  if (!genAI) {
+    const apiKey = process.env.GEMINI_API_KEY;
+    if (!apiKey || apiKey === "MY_GEMINI_API_KEY") {
+      throw new Error("GEMINI_API_KEY environment variable is not set correctly. Please configure it in the Secrets panel.");
+    }
+    genAI = new GoogleGenAI({ apiKey });
+  }
+  return genAI;
+}
 
 export async function extractProjectsFromBehance(data: string | any): Promise<Project[]> {
   const dataStr = typeof data === 'string' ? data : JSON.stringify(data);
+  
+  const ai = getGenAI();
   
   const prompt = `Extract the latest 6 design projects from this data (can be HTML or JSON from a Behance profile).
   Return an array of exactly 6 project objects with these fields matching the Project interface:
@@ -22,37 +35,37 @@ export async function extractProjectsFromBehance(data: string | any): Promise<Pr
   ${dataStr.substring(0, 40000)}
   `;
 
-  const response = await ai.models.generateContent({
-    model: "gemini-3-flash-preview",
-    contents: prompt,
-    config: {
-      responseMimeType: "application/json",
-      responseSchema: {
-        type: Type.ARRAY,
-        items: {
-          type: Type.OBJECT,
-          properties: {
-            id: { type: Type.STRING },
-            title: { type: Type.STRING },
-            cat: { type: Type.STRING },
-            img: { type: Type.STRING },
-            desc: { type: Type.STRING },
-            link: { type: Type.STRING },
-            tools: { type: Type.ARRAY, items: { type: Type.STRING } },
-            sub: { type: Type.STRING },
-            featured: { type: Type.BOOLEAN },
-          },
-          required: ["id", "title", "cat", "img", "desc", "link", "tools", "sub"],
+  try {
+    const response = await ai.models.generateContent({
+      model: "gemini-3-flash-preview",
+      contents: prompt,
+      config: {
+        responseMimeType: "application/json",
+        responseSchema: {
+          type: "array",
+          items: {
+            type: "object",
+            properties: {
+              id: { type: "string" },
+              title: { type: "string" },
+              cat: { type: "string" },
+              img: { type: "string" },
+              desc: { type: "string" },
+              link: { type: "string" },
+              tools: { type: "array", items: { type: "string" } },
+              sub: { type: "string" },
+              featured: { type: "boolean" },
+            },
+            required: ["id", "title", "cat", "img", "desc", "link", "tools", "sub"],
+          }
         }
       }
-    }
-  });
+    });
 
-  try {
     const text = response.text || "[]";
     return JSON.parse(text);
   } catch (e) {
-    console.error("Failed to parse Gemini response for Behance projects:", e);
+    console.error("Failed to extract or parse Gemini response for Behance projects:", e);
     return [];
   }
 }
