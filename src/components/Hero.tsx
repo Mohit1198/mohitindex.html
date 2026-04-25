@@ -69,19 +69,19 @@ export default function Hero() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, delay: 0.8 }}
-        className="absolute right-[5vw] bottom-[60px] hidden lg:flex gap-12 z-1"
+        className="absolute right-[5vw] bottom-[100px] hidden lg:flex gap-16 z-1"
       >
-        <div className="text-right">
-          <div className="font-['Syne'] text-[2.2rem] font-bold bg-[var(--grad)] bg-clip-text text-transparent leading-none">4+</div>
-          <div className="text-[0.75rem] text-[var(--muted)] mt-1">Years of Experience</div>
+        <div className="flex flex-col items-end">
+          <div className="font-syne text-[2.8rem] font-bold bg-linear-to-r from-[var(--accent1)] to-[var(--accent2)] bg-clip-text text-transparent leading-none">4+</div>
+          <div className="text-[0.7rem] text-[var(--muted)] mt-2 uppercase tracking-[0.1em] font-medium">Years of Experience</div>
         </div>
-        <div className="text-right">
-          <div className="font-['Syne'] text-[2.2rem] font-bold bg-[var(--grad)] bg-clip-text text-transparent leading-none">10+</div>
-          <div className="text-[0.75rem] text-[var(--muted)] mt-1">Clinic Brands</div>
+        <div className="flex flex-col items-end">
+          <div className="font-syne text-[2.8rem] font-bold bg-linear-to-r from-[var(--accent1)] to-[var(--accent2)] bg-clip-text text-transparent leading-none">10+</div>
+          <div className="text-[0.7rem] text-[var(--muted)] mt-2 uppercase tracking-[0.1em] font-medium">Clinic Brands</div>
         </div>
-        <div className="text-right">
-          <div className="font-['Syne'] text-[2.2rem] font-bold bg-[var(--grad)] bg-clip-text text-transparent leading-none">4</div>
-          <div className="text-[0.75rem] text-[var(--muted)] mt-1">Companies</div>
+        <div className="flex flex-col items-end">
+          <div className="font-syne text-[2.8rem] font-bold bg-linear-to-r from-[var(--accent1)] to-[var(--accent2)] bg-clip-text text-transparent leading-none">4</div>
+          <div className="text-[0.7rem] text-[var(--muted)] mt-2 uppercase tracking-[0.1em] font-medium">Companies</div>
         </div>
       </motion.div>
 
